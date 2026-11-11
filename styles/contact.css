@@ -1,0 +1,39 @@
+/* ---- the email section ---- */
+.mail { display: grid; gap: 28px; }
+.mail[hidden] { display: none; }
+.mail .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 36px; }
+.field { display: grid; gap: 8px; }
+.field label .opt { opacity: 0.6; }
+.field input, .field textarea {
+  width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--ash-600); border-radius: 0; color: var(--bone);
+  font: 500 18px/26px var(--font-caption); padding: 6px 0 10px; transition: border-color 0.3s;
+}
+.field textarea { min-height: 150px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--bone); }
+.field input:focus-visible, .field textarea:focus-visible { outline: none; box-shadow: 0 1px 0 0 var(--bone); }
+.field input:-webkit-autofill { -webkit-text-fill-color: var(--bone); transition: background-color 99999s; }
+.field.bad input, .field.bad textarea { border-color: var(--bone); border-bottom-style: dashed; }
+.err {
+  font-family: var(--font-credit); font-weight: 700; font-size: 11px; line-height: 13px; text-transform: uppercase;
+  letter-spacing: 0.02em; color: var(--bone); min-height: 13px;
+}
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.send, .ghost {
+  display: inline-flex; align-items: center; gap: 12px; background: none; color: var(--bone); border: 1px solid var(--bone);
+  border-radius: 2px; cursor: pointer; font-family: var(--font-credit); font-weight: 700; text-transform: uppercase;
+  transition: background 0.3s, color 0.3s, opacity 0.3s;
+}
+.send { padding: 15px 24px; font-size: 15px; line-height: 1; }
+.ghost { padding: 9px 14px; font-size: 11px; line-height: 1; border-color: var(--ash-400); }
+.send:hover, .ghost:hover { background: var(--bone); color: var(--void); }
+.send[disabled] { opacity: 0.5; cursor: progress; }
+.send svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+.fallback, .sent { display: grid; gap: 12px; align-content: start; padding: 22px 0 0; border-top: 1px solid var(--ash-600); }
+.fb-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.addr { color: var(--bone); font-weight: 600; }
+.direct { display: grid; gap: 16px; }
+
+@media (max-width: 820px) {
+  .mail .row { grid-template-columns: 1fr; }
+}

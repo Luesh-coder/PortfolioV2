@@ -1,0 +1,53 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--void);
+  color: var(--text);
+  font-family: var(--font-caption);
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 500;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+
+/* ---- credits typography (from the title sequence) ---- */
+.credit { display: flex; flex-direction: column; gap: 3px; }
+.credit-role {
+  font-family: var(--font-credit); font-weight: 700; font-size: 11px; line-height: 1.2;
+  letter-spacing: 0.02em; text-transform: uppercase; color: var(--bone); opacity: 0.82;
+}
+.credit-name {
+  font-family: var(--font-credit); font-weight: 700; text-transform: uppercase;
+  letter-spacing: -0.005em; line-height: 1; color: var(--bone); margin: 0;
+}
+.xl { font-size: clamp(44px, 7vw, 92px); line-height: 0.94; letter-spacing: -0.015em; }
+.lg { font-size: clamp(28px, 3.4vw, 40px); }
+.md { font-size: 22px; line-height: 1.08; }
+.sm { font-size: 17px; line-height: 1.18; }
+.meta { font-family: var(--font-mono); font-size: 12px; line-height: 18px; letter-spacing: 0.03em; color: var(--ash-400); font-weight: 400; }
+
+/* credits arrive smeared, then bloom: a glow that swells and settles, like light through a lens */
+@keyframes creditIn {
+  0%   { opacity: 0; filter: blur(10px); transform: translateX(-14px); text-shadow: 18px 0 8px rgba(var(--rgb), 0.5), -12px 0 6px rgba(var(--rgb), 0.3); }
+  32%  { opacity: 1; filter: blur(1.5px); text-shadow: 0 0 26px rgba(var(--rgb), 0.7), 0 0 4px rgba(var(--rgb), 0.9); }
+  60%  { text-shadow: 0 0 12px rgba(var(--rgb), 0.25), 0 0 1px rgba(var(--rgb), 0.4); }
+  100% { opacity: 1; filter: blur(0); transform: none; text-shadow: 0 0 0 rgba(var(--rgb), 0); }
+}
+@keyframes fade { to { opacity: 1; } }
+
+/* reveal: chapters render dormant; .growth is set on <html> before paint (see app/layout.tsx), so without JS
+   or with reduced motion everything simply shows */
+.growth .dormant .rv { opacity: 0; }
+
+/* while the visitor is pressing and dragging to grow cordyceps */
+html.growing, html.growing * { cursor: crosshair !important; user-select: none; -webkit-user-select: none; }
+.rv.go { animation: creditIn 1.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rv.go { animation: none; }
+}

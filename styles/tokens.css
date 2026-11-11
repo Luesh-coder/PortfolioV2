@@ -1,0 +1,49 @@
+/* Cordyceps design tokens. Infected (dark) is the default; Daylight is a true inversion. */
+:root {
+  --void: #050505;
+  --ash-900: #0e0e0e;
+  --ash-800: #161616;
+  --ash-600: #2e2e2e;
+  --ash-400: #8f8f8f;
+  --bone: #d9d9d6;
+  --text: #bdbdb9;
+  --hypha: #ffffff;
+  --hypha-dim: #5a5a5a;
+  --focus: #ffffff;
+  --clearing: rgba(5, 5, 5, 0.86);
+  --flood-ink: #0a0a0a;
+  --rgb: 255, 255, 255; /* growth color as r,g,b for canvas gradients */
+
+  /* type: Helvetica credits (Arimo where Helvetica isn't installed), Barlow prose, JetBrains Mono meta.
+     --font-arimo / --font-barlow / --font-jetbrains come from next/font in app/layout.tsx */
+  --font-credit: "Helvetica Neue", Helvetica, var(--font-arimo), Arial, sans-serif;
+  --font-caption: var(--font-barlow), "DIN Next", Bahnschrift, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, Menlo, Consolas, monospace;
+
+  --goo: blur(2.2px) contrast(16) blur(0.4px);
+  --substrate-op: 0.12;
+  --substrate-blend: screen;
+  --grain-op: 0.09;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --void: #ffffff;
+  --ash-900: #f0f0ee;
+  --ash-800: #e6e6e3;
+  --ash-600: #cfcfcb;
+  --ash-400: #5f5f5c;
+  --bone: #1c1c1c;
+  --text: #2c2c2a;
+  --hypha: #000000;
+  --hypha-dim: #a3a3a0;
+  --focus: #000000;
+  --clearing: rgba(255, 255, 255, 0.88);
+  --flood-ink: #f2f2f2;
+  --rgb: 0, 0, 0;
+  --goo: blur(2.2px) contrast(16) blur(0.4px) invert(1);
+  --substrate-op: 0.08;
+  --substrate-blend: multiply;
+  --grain-op: 0.06;
+  color-scheme: light;
+}
