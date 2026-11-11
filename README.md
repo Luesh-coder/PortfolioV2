@@ -1,6 +1,6 @@
-# Portfolio V2 — Cordyceps
+# Portfolio V2 
 
-Lucio Villena's portfolio. A black-and-white homage to the opening titles of *The Last of Us*: slime-mold veins, meshes and blooms grow across the page as you scroll, each branch uncovers a chapter, and the page ends in a white flood with black fruiting bodies rising through it.
+Lucio Villena's portfolio. Inspired by opening credits in The Last Of Us: slime-mold veins, meshes and blooms grow across the page as you scroll, each branch uncovers a chapter, and the page ends in a white flood with black fruiting bodies rising through it.
 
 Built with **Next.js 16 (App Router)**, **React 19** and **TypeScript**. No UI or animation libraries: the growth is a hand-written canvas engine.
 

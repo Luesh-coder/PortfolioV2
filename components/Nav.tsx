@@ -30,7 +30,7 @@ export function Nav() {
         <li className="navlink"><a href="#epilogue">Contact</a></li>
         <li>
           <button className="theme-btn credit-role" type="button" aria-pressed={light} onClick={toggle}>
-            {light ? 'Infected' : 'Daylight'}
+            {light ? 'Nightmode' : 'Daylight'}
           </button>
         </li>
       </ul>

@@ -60,24 +60,9 @@ export const site = {
         tags: ['python', 'ml', 'sports data'],
       },
       {
-        index: '03', status: 'working', name: 'ai-job-search',
-        description: 'A job-search agent system made of several command-line tools that automate parts of the hunt.',
-        tags: ['bun', 'typescript', 'agents', 'cli'],
-      },
-      {
-        index: '04', status: 'early stage', name: 'Chess Coach Agent',
-        description: 'An AI agent built to coach me as I learn chess.',
-        tags: ['agents', 'llm'],
-      },
-      {
-        index: '05', status: 'mobile', name: 'STARApp',
-        description: 'A cross-platform mobile app built with React Native and Expo.',
+        index: '05', status: 'embedded and mobile', name: 'S.T.A.R. ',
+        description: 'Automated tracking of a spotlight on a moving target, using a Raspberry Pi and a camera module. The Pi runs a small ML model to detect the target and control the motors via ESP32 and servo controllers that move the spotlight. Designed a mobil app for control and monitoring of the system, built with React Native and Expo.',
         tags: ['react native', 'expo'],
-      },
-      {
-        index: '06', status: 'this site', name: 'Cordyceps',
-        description: 'This portfolio: a slime-mold growth simulation drawn on canvas, where each branch uncovers a chapter.',
-        tags: ['next.js', 'canvas', 'generative'],
       },
     ] as Project[],
   },
@@ -100,14 +85,14 @@ export const site = {
     entries: [
       {
         when: '2026 — present', role: 'University of Central Florida', title: 'MS Computer Engineering',
-        body: 'Machine learning focus. Coursework includes Machine Learning (CAP 5610), Advanced Artificial Intelligence (CAP 5636) and Machine Learning & Pattern Recognition (EEL 5825).',
+        body: 'Coursework: Machine Learning (CAP 5610), Advanced Artificial Intelligence (CAP 5636) and Machine Learning & Pattern Recognition (EEL 5825).',
       },
       {
-        when: 'contract', role: 'AI training data', title: 'Annotation & Evaluation',
-        body: 'Adversarial red-teaming and reward-model side-by-side evaluation of AI system outputs.',
+        when: '2022 - 2026', role: 'University of Central Florida', title: 'BS Computer Engineering',
+        body: 'Coursework: Data Structures & Algorithms (COP 3502 & COP 3503), Embedded Systems (EEL 4745), Operating Systems (COP 4600), Processes for Object-Oriented Developement (COP 4331), Computer Architecture (EEL 4768) and Algorithms for Machine Learning (CAP 4611).',
       },
       {
-        when: 'earlier', role: 'Hardware & systems', title: 'Embedded & ML Systems',
+        when: 'earlier', role: 'Hardware & Systems', title: 'Embedded & ML Systems',
         body: 'Hands-on work across embedded systems and machine learning systems.',
       },
     ] as FieldNote[],
